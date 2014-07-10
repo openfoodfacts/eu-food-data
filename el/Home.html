@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1253" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title>Διαδικτυακή Πύλη του Ε.Φ.Ε.Τ.</title>
+    <link rel="shortcut icon" href="/images/efet_res/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" media="all" type="text/css" href="/images/efet_res/css/home-style-v4.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="/images/efet_res/css/content_style-v14.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="/images/efet_res/css/menu-home-v6.css" />
+    <!--[if lte IE 7]>
+    <style type="text/css">
+    html .jquerycssmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+    </style>
+    <![endif]-->
+    <style type="text/css">
+        #sec_links2 {
+            position: absolute;
+            top: 25px;
+            right: -23px;
+            height: 20px; /* background-color:#fff; */
+            background-image: url(/images/efet_res/img/link3.gif);
+            background-repeat: no-repeat;
+        }
+
+            #sec_links2 div {
+                float: left;
+                line-height: 20px;
+            }
+
+                #sec_links2 div a {
+                    color: white;
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+
+        .edit-page {
+            position: absolute;
+            top: 50px;
+            right: -2px;
+            height: 20px;
+            background-color: #fff;
+            -moz-border-radius: 10px 0 0 10px;
+        }
+
+            .edit-page a {
+                color: black;
+                font-size: 12px;
+                text-decoration: none;
+            }
+    </style>
+    <script type="text/javascript" src="/images/efet_res/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/images/efet_res/js/menu-home.js"></script>
+    <script type="text/javascript" src="/images/efet_res/js/jquery.innerfade/js/jquery.innerfade.js"></script>
+
+    <script type="text/javascript" src="/images/efet_res/js/jquery.form.js"></script>
+    <script type="text/javascript">
+        function Change_Lang(x) {
+
+            var strHref = window.location.href;
+            var resultString = "";
+            if (strHref.indexOf("/portal/page/portal/") > -1) {
+                resultString = strHref.substr(strHref.indexOf("/portal/page/portal/"));
+                //alert(resultString);
+            } else {
+                resultString = strHref;
+            }
+
+            if (x == "el") {
+
+                window.location.href = ("/portal/pls/portal/portal.wwctx_app_language.set_language?p_http_language=el-gr&p_nls_language=el&p_nls_territory=GREECE&p_requested_url=" + resultString);
+
+            } else if (x == 'en') {
+                window.location.href = ("/portal/pls/portal/portal.wwctx_app_language.set_language?p_http_language=en-us&p_nls_language=us&p_nls_territory=AMERICA&p_requested_url=" + resultString);
+                //alert("English Version Under Construction");
+            }
+        }
+        $(document).ready(function() {
+            // test web browser
+            if (jQuery.browser.msie) {
+                var iever = parseInt(jQuery.browser.version);
+                if (iever == 6) {
+                    location.href = "/portal/page/portal/efetnew/browser-compatibility";
+                }
+            }
+
+            //$("#dialog").dialog({modal: 'true',position:'center', resizable: 'true', height: 525, width: 655});
+
+            // Show language flag accordingly
+            
+var vlang = "en";
+
+            if(vlang == 'el'){
+                $("#lang").html('<a href="#" onclick="Change_Lang(\'en\');"><img src="/images/efet_res/img/en_flg.png" border=0 style="height:20px;"></a>');
+            }
+            else if(vlang == 'en'){
+                $("#lang").html('<a href="#" onclick="Change_Lang(\'el\');"><img src="/images/efet_res/img/gr_flg.png" border=0 style="height:20px;"></a>');
+            }
+
+            $('#home'+" a").css("background","white");
+            $('#home'+" a").css("color","black");
+        });
+
+        function editPage() {
+            var hrf = window.location.href;
+            if (hrf.indexOf("?") > -1) location.href = hrf + '&_mode=16';
+            else location.href = hrf + '?_mode=16';
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-5986021-31']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+
+</head>
+<body>
+    
+          <script type="text/javascript" src="/images/efet_res/js/validation_v1en.js"></script>          <div id="container" style="position:relative;">              <div id="heading">                  <div id="fader">                      <!--<img src="img/banner-b.jpg">-->                  </div>                  <div id="logo" style="background-color: transparent;"><a href="http://www.efet.gr"><img src="/images/efet_res/img/new-logo-en.png"></a></div>                  <div id="sec_links">                      <div style="background-color:#58a581;padding:0 15px"><a href="#" onclick="openNewsletterForm();" id="newslet">Newsletter</a></div>                      <div style="background-image:url(/images/efet_res/img/link.gif);background-position:50% 50%;background-repeat:no-repeat;width:13px;height:20px;font-size:7px">&nbsp;</div>                      <div style="background-color:#fff;padding:0 15px"><a href="/portal/page/portal/efetnew/contact" style="color:black">Contact</a></div>                      <div id="lang"></div>                  </div>                  <div style="height: 20px; position: absolute; top: 118px; right: 165px; padding: 5px; font-size:12px;" id="drss"><a href="/portal/page/portal/efetnew/news/rss-categories"><img src="/images/efet_res/img/rss/RSS_32.png" border="0" title="Rss Feeds"></a></div>                  <div style="height: 20px; position: absolute; top: 120px; right: 5px; padding: 5px; font-size:12px;" id="dpoll"><a href="javascript:openPollsForm(1);"><img src="/images/efet_res/img/polls-en-small.png" border="0"></a></div>                                    <!-- login -->                  <div id="sec_links2">                      <div style="padding: 0px 25px;"><a href="http://sso.efet.gr:7777/EFETLoginPage/login.jsp?site2pstoretoken=v1.2~849016D6~A87894B8AD85D377613E86BED464091F055E01F8AD2A9D379194F0D357AE41725A02F893F77C7D8FD7168E27B71AC0528FAF459B5B4572CB761CC28961297CE01CB5FB1713FBB5AC13634FC2C0F745254284B317D1B4ABE300745CC9C18947D51536F1F86C6950967FD5C80239D05CDD3EB56810F9373E17FA6A2A35EA61201AEC4F89D3DFF9F4EF9472A6A9FC04B2EF3EC18C7C9B00FCF8F0A0236D3863E365BB6B516E6FDC0771346E952EC637255546D8F9063770C548E8643F0EF5384B4DCBE0116081575A1824F2EC6018AC957224E29B7201F8B879C070BCA0CE5695B2&p_error_code=&p_submit_url=http%3A%2F%2Fsso.efet.gr%3A7777%2Fsso%2Fauth&p_cancel_url=http%3A%2F%2Fwww.efet.gr%2Fportal%2Fpls%2Fportal%2FPORTAL.home&ssousername=&subscribername=" style="text-decoration: none; font-size: 12px; color: black;">Login</a>&nbsp;<img border="0" style="margin-top: 1px;" src="/images/efet_res/img/key.png"></div>                  </div>                  <!-- google search -->                  <div style="height: 20px; position: absolute; right: 10px; top: 80px; left: 700px;">                      <div id="cse-search-form" style="width: 100%;">Loading</div>                      <script src="http://www.google.com/jsapi" type="text/javascript"></script>                      <script type="text/javascript">                            google.load('search', '1', {language : 'en'});                          google.setOnLoadCallback(function() {                              var customSearchControl = new google.search.CustomSearchControl('001314634350439473053:dknd7xiw4ho');                              customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);                              var options = new google.search.DrawOptions();                              options.setAutoComplete(true);                              options.enableSearchboxOnly("http://portal.efet.gr/portal/page/portal/efetnew/search_results");                              customSearchControl.draw('cse-search-form', options);                          }, true);                      </script>                      <link rel="stylesheet" href="/images/efet_res/css/google-search/default3.css" type="text/css" />                  </div>                  <!-- end google search -->
+              </div>              <!-- end heading div -->              
+<div id="menublock" style="position:absolute; left:0; width:1020px;">
+<div id="myjquerymenu" class="jquerycssmenu">
+<ul>
+<li id="home"><a href="/portal/page/portal/efetnew/Home">HOME</a></li>
+<li id="efet"><a href="#">EFET</a>
+<UL style="top: 32px; display: none; visibility: visible;">
+<li><a href="/portal/page/portal/efetnew/efet/mission">Mission - Responsibilities</a> </li>
+<li><a href="/portal/page/portal/efetnew/efet/institutions/about">European  & International Institutions</a></li>
+<!-- li><a href="/portal/page/portal/efetnew/efet/scientific_coo">Scientific collaborations</a></li>
+<li><a href="/portal/page/portal/efetnew/efet/scientific_coo">Επιστημονικό Συμβούλιο Ελέγχου Τροφίμων(Ε.Σ.Ε.Τ.)</a></li-->
+<li><a href="/portal/page/portal/efetnew/contact">Contact</a></li>
+<!--li><a href="http://sites.diavgeia.gov.gr/efet" target="_blank">Clarity</a></li-->
+</ul>
+</li>
+<li id="enterpr"><a href="#">FOOD COMPANIES</a>
+<UL>
+<!--li><a href="/portal/page/portal/efetnew/enterprises/education">Staff Training</a> </li>
+<li><a href="/portal/page/portal/efetnew/enterprises/report_incident">Report an incident</a></li>
+<li><a href="/portal/page/portal/efetnew/enterprises/hygiene_guides?par=ENTERPRISE">Hygiene Guides</a></li>
+<li><a href="/portal/page/portal/efetnew/enterprises/guidelines?cat=ENTERPRISES">Guidance Documents</a></li>
+<li><a href="/portal/page/portal/efetnew/enterprises/licences">Establishment licences</a></li-->
+<li><a href="/portal/page/portal/efetnew/enterprises/facilities">Approved establishments</a></li>
+</ul>
+</li>
+<li id="consu"><a href="#">CONSUMERS</a>
+<UL>
+<li><a href="/portal/page/portal/efetnew/consumers/submit_complaint">Submit a Complaint</a> </li>
+<!--li><a href="/portal/page/portal/efetnew/consumers/consumers_info">Information for the Consumers</a></li>
+<li><a href="/portal/page/portal/efetnew/consumers/official_audit">Επίσημος έλεγχος</a></li-->
+</ul>
+</li>
+<li id="auth"><a href="#">CONTROLLING AUTHORITIES</a>
+<UL>
+<li><a href="/portal/page/portal/efetnew/authorities_control/about">About Controlling Authorities</a></li>
+<!--li><a href="/portal/page/portal/efetnew/authorities_control/control_guides">Inspection Reference, Guides </a> </li>
+<li><a href="/portal/page/portal/efetnew/authorities_control/printed_articles_categories/printed_articles_per_category">Inspections Documents</a></li>
+<li><a href="/portal/page/portal/efetnew/authorities_control/circular_documents">Εγκύκλιοι</a></li>
+<li><a href="/portal/page/portal/efetnew/authorities_control/programs">Προγράμματα επισήμων ελέγχων τροφίμων</a></li>
+<li><a href="/portal/page/portal/efetnew/authorities_control/control_auth_training">Εκπαίδευση προσωπικού αρχών ελέγχων</a></li>
+<li><a href="/portal/page/portal/efetnew/authorities_control/laboratories">Inspections Laboratories</a></li-->
+</ul>
+</li>
+<!--li id="legisl"><a href="#">LEGISLATION</a>
+<UL>
+<li><a href="/portal/page/portal/efetnew/legislations/national_legislations">National Legislation</a> </li>
+<li><a href="/portal/page/portal/efetnew/legislations/sociable_legislations">European Legislation</a></li>
+<li><a href="/portal/page/portal/efetnew/legislations/consultations">Concultations</a></li>
+</ul>
+</li-->
+<li id="inf"><a href="#">NEWS</a>
+<UL>
+<li><a href="/portal/page/portal/efetnew/news/view_news_categories?cat=PRESS">Press Releases</a> </li>
+<!-- li><a href="/portal/page/portal/efetnew/news/news_per_category?par_newCatId=18">Seminars - conferences - workshops - events</a></li -->
+<!--li><a href="/portal/page/portal/efetnew/news/news_per_category?par_newCatId=19">News for food</a></li-->
+<li><a href="/portal/page/portal/efetnew/news/view_news_categories?cat=OTHER">Other News</a> </li>
+<!--li id="other"><a href="/portal/page/portal/efetnew/news/view_news_categories?par_newCatId=37">Auctions</a></li-->
+<li><a href="/portal/page/portal/efetnew/alarms/view_alarms">Critical Announcements</a> </li>
+<li><a href="/portal/page/portal/efetnew/news/polls_list">Polls</a> </li>
+</ul>
+</li>
+<li id="lib"><a href="#">LIBRARY &amp; SOURCES</a>
+<UL>
+<li><a href="/portal/page/portal/efetnew/library/useful_links">Useful links</a> </li>
+<!--li><a href="/portal/page/portal/efetnew/library/consumers_info?cat=CONSUMERS">Information for the Consumers</a></li>
+<li><a href="/portal/page/portal/efetnew/library/enterprises_info">Πληροφορίες για τις επιχειρήσεις</a></li>
+<li><a href="/portal/page/portal/efetnew/library/practice_guides?par=GUIDES">Οδηγοί ορθής παραγωγικής πρακτικής</a></li>
+<li><a href="/portal/page/portal/efetnew/library/plans">Ετήσιες εκθέσεις ελέγχων – Απολογισμός Δράσεων - Γνωμοδοτήσεις</a></li-->
+</ul>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+<!-- end myjquerymenu div -->
+</div>
+    <!-- end menublock div -->
+    <div id="content_wrapper">
+        <div id="content">
+            <!-- this is the main content area -->
+            
+<iframe id="portalIFrame" title="" frameborder="0" width="0" height="0" src="/images/pobtrans.gif"></iframe><SCRIPT TYPE="text/javascript" SRC="http://portal.efet.gr/portal/pls/portal/PORTAL.wwsbr_javascript.page_js?p_language=us&p_version=10.1.4.0.0.594">
+<!-- Comment out script for old browsers
+//-->
+</SCRIPT>
+<TABLE  WIDTH="100%" id="rg13017"  border="0" cellpadding="0" cellspacing="0" summary=""><TR ALIGN="LEFT">
+<TD vAlign="top" style="padding:4px 4px 0px 4px;" width="100%"><DIV id="p74_200083_74_200073_200073"><TABLE  BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0" class="RegionNoBorder">
+<TR><TD class="RegionHeaderColor" WIDTH="100%"><DIV id="pcnt74_200083_74_200073_200073"><script type='text/javascript' src='/images/efet_res/js/swfobject.js'></script>
+<link rel="stylesheet" media="all" type="text/css" href="/images/efet_res/js/jquery-tooltip/jquery.tooltip.css" />
+<script type="text/javascript" src="/images/efet_res/js/jquery-tooltip/lib/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="/images/efet_res/js/jquery-tooltip/lib/jquery.dimensions.js"></script>
+<script type="text/javascript" src="/images/efet_res/js/jquery-tooltip/jquery.tooltip.js"></script>
+
+<div id="compaint" style="z-index:1; width:240px" class="blocktype-2"> <!--span class="blocktitle">SUBMIT A COMPLAINT</span-->
+  <div id='mediaspace'></div>
+  <script type='text/javascript'>
+$(document).ready(function() {
+
+  $('#more').css("background-color","#EEEEEE");
+$('#more').css("border","1px solid #BBBBBB");
+$('#more').css("bottom","-10px");
+$('#more').css("padding","2px 10px");
+$('#more').css("position","absolute");
+$('#more').css("right","18px");
+$('#more').css("z-index","99");
+
+});
+
+$(function() {
+$("#hovImage a").tooltip({ 
+    track: true, 
+    delay: 0, 
+    showURL: false, 
+    showBody: " - ", 
+    fade: 250 
+});
+});
+
+$(function() {
+$("#aaa a").tooltip({ 
+    track: true, 
+    delay: 0, 
+    showURL: false, 
+    showBody: " - ", 
+    fade: 250 
+});
+});
+
+var so = new SWFObject('/images/efet_res/player/player.swf','mpl','240','158','9');
+so.addParam('allowfullscreen','true');
+so.addParam('allowscriptaccess','always');
+so.addParam('wmode','opaque');
+so.addVariable('file','/images/efet_res/img/welcome3.flv');
+so.addVariable('controlbar','none');
+so.addVariable('autostart','true');
+so.addVariable('icons','false');
+so.addVariable('repeat','always');
+so.addVariable('stretching','exactfit');
+so.write('mediaspace');
+</script>
+  <!--p> You can send a complaint via e-mail or alternatively print the EFET complaint form.</p>
+  <p><a href="/portal/page/portal/efetnew/consumers/submit_complaint">Fill-in the form</a> </p-->
+  <div style="height:20px"></div>
+</div>
+<div id="welcome" class="blocktype-1" style="width:435px"> <span class="blocktitle">EFET Mission</span>
+  <p>EFET was established by virtue of L. 2741/GG 199/28-09-1999. It is a public entity supervised by the Μinistry of Rural Development and Food. The responsibilities of EFET are the following:</p>
+  <div style="z-index: 1; background-color: rgb(238, 238, 238); right: 110px;" id="more"><a style="color: rgb(68, 68, 68); text-decoration:none" href="/portal/page/portal/efetnew/efet/mission">more...</a></div>
+</div>
+<div style="width: 240px; float: right; clear:right;">
+<img width="240px" height="100px" src="/images/efet_res/images/11717_eng.jpg">
+</div>
+<div id="welcome" class="blocktype-1" style="width:435px; margin-bottom:40px; margin-top:50px"><SPAN class="blocktitle">Approved Establishments </SPAN>
+  <div style="margin-top:10px;">
+    <div style="padding-right:5px; float:left" id="hovImage"><A title="Meat & Meat Products" href="/portal/page/portal/efetnew/enterprises/facilities/meat_facilities"> <IMG style="WIDTH: 100px; HEIGHT: 85px; border:none" src="/images/efet_res/images/meat-packing-v2.jpg"></A> </div>
+    <div style="padding-right:5px; float:left " id="hovImage"><A title="Fishery Products" href="/portal/page/portal/efetnew/enterprises/facilities/fishing_facilities"> <IMG style="WIDTH: 100px; HEIGHT: 85px; border:none" src="/images/efet_res/images/fish-pack-v2.jpg"></A> </div>
+    <div style="padding-right:5px; float:left " id="hovImage"><A title="Milk & Dairy Products" href="/portal/page/portal/efetnew/enterprises/facilities/milk_facilities"> <IMG style="WIDTH: 100px; HEIGHT: 85px; border:none" src="/images/efet_res/images/milk_factory.jpg"></A> </div>
+    <div style="padding-right:5px; float:left " id="hovImage"><A title="Egg Products" href="/portal/page/portal/efetnew/enterprises/facilities/eggs_facilities"> <IMG style="WIDTH: 98px; HEIGHT: 85px; border:none" src="/images/efet_res/images/egg-factory-v2.jpg"></A> </div>
+  </div>
+  <div style="clear:both"></div>
+</DIV>
+<div id="newslist" class="blocktype-1"> <span class="blocktitle">News</span> <div class="newslist-item" id="aaa">
+								<div class="newslist-date">Jul<span>04</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on «Roasted peanuts»" href="/portal/page/portal/efetnew/news/view_new?par_newID=1258"> (RECALLS) Product Recall: “Product Recall Information Notice on «Roasted peanuts»</a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Jun<span>30</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on «Rossiki salad»”" href="/portal/page/portal/efetnew/news/view_new?par_newID=1252"> (RECALLS) Product Recall: “Product Recall Information Notice on «Rossiki salad»”</a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Jun<span>27</span></div>
+								<a title="Product Recall: “Product Recall Information Notice” “Salami recall due to Listeria monocytogenes presence”" href="/portal/page/portal/efetnew/news/view_new?par_newID=1250"> (RECALLS) Product Recall: “Product Recall Information Notice” “Salami recall due to Liste...</a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">May<span>08</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on non compliant olive oil”" href="/portal/page/portal/efetnew/news/view_new?par_newID=1224"> (RECALLS) Product Recall: “Product Recall Information Notice on non compliant olive oil”</a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Apr<span>29</span></div>
+								<a title="  Product Recall: “Product Recall Information Notice on children's flask”" href="/portal/page/portal/efetnew/news/view_new?par_newID=1217"> (RECALLS)   Product Recall: “Product Recall Information Notice on children's flask”</a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Mar<span>11</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on cake product” " href="/portal/page/portal/efetnew/news/view_new?par_newID=1205"> (RECALLS) Product Recall: “Product Recall Information Notice on cake product” </a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Mar<span>11</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on Cookware” " href="/portal/page/portal/efetnew/news/view_new?par_newID=1206"> (RECALLS) Product Recall: “Product Recall Information Notice on Cookware” </a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Mar<span>11</span></div>
+								<a title="Product Recall: “ Product Recall Information Notice on breakfast cereals” " href="/portal/page/portal/efetnew/news/view_new?par_newID=1207"> (RECALLS) Product Recall: “ Product Recall Information Notice on breakfast cereals” </a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Mar<span>11</span></div>
+								<a title="Product Recall: “Product Recall Information Notice on croissant” " href="/portal/page/portal/efetnew/news/view_new?par_newID=1208"> (RECALLS) Product Recall: “Product Recall Information Notice on croissant” </a> 
+                   
+                   </div><div class="newslist-item" id="aaa">
+								<div class="newslist-date">Feb<span>27</span></div>
+								<a title="Product Recall Information Notice on “olive pomace oil” product" href="/portal/page/portal/efetnew/news/view_new?par_newID=1177"> (RECALLS) Product Recall Information Notice on “olive pomace oil” product</a> 
+                   
+                   </div> <BR>
+  <BR>
+  <div id="more" style="z-index: 99; background-color: rgb(238, 238, 238); right: 18px; border: 1px solid rgb(187, 187, 187); bottom: -10px; padding: 2px 10px; position: absolute;"><a href="/portal/page/portal/efetnew/news/view_news_categories?cat=PRESS" style="color: rgb(68, 68, 68); text-decoration: none;">more news...</a></div>
+</div></DIV></TD></TR>
+</TABLE>
+</DIV></TD></TR>
+<TR>
+<TD COLSPAN="1" WIDTH="100%" ><IMG SRC="/images/pobtrans.gif" height="4" width="1" ALT=""></TD>
+</TR>
+</TABLE><!----- show footer template = 1084022612 ----->
+
+        </div>
+        <!-- end content div -->
+        <div id="rightbar" style="margin-top:-5px">
+            
+<!--div class="rblock" id="alarms">
+  <div class="barrow"></div>
+  <div class="rtitle rtitle_c2">CRITICAL ANNOUNCEMENTS</div>
+  <div class="rcontent"> No alarm at this time.<BR>
+    <BR>
+    <div class="rmore" style="background-color:#eee;right:110px"><a href="/portal/page/portal/efetnew/alarms/view_alarms" style="color:#444">more</a></div>
+  </div>
+  <div style="clear:both"></div>
+</div-->
+<div class="rblock" id="alarms">
+  <div class="barrow"></div>
+  <div class="rtitle rtitle_c2">CRITICAL ANOUNCEMENTS</div>
+  <div class="rcontent"> No alarm at this time.<BR>
+    <BR>
+    
+  </div>
+  <div style="clear:both"></div>
+</div>                  <div class="rblock" id="pollsBanner">                      <div class="barrow"></div>                      <div class="rtitle rtitle_c1">POLLS</div>                      <div class="rcontent">                          <p><b><u>Tell us your opinion about our new Portal</u></b></p>
+<p align="center"><table width="100%" style="padding-left:15px; text-align:left"><tr><td><u>Excellent: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="34" height="20"> 34% </td></tr><tr><td><u>Good: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="28" height="20"> 28% </td></tr><tr><td><u>Average: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="21" height="20"> 21% </td></tr><tr><td><u>Not so good: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="18" height="20"> 18% </td></tr></table></p>
+<br>
+<p><u>Total votes:</u> <b>790</b></p>
+<br>                      </div>                      <div class="rmore"><a href="/portal/page/portal/efetnew/news/polls_list">Polls</a></div>                      <div style="clear:both"></div>                  </div>                  
+            <div class="rblock">
+                <div class="rcontent" style="padding: 0 20px">
+                    <a target="_blank" href="http://www.gr2014.eu/el">
+                        <img border="display_none" src="/images/efet_res/images/GR2014EUs.gif">
+                    </a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    <!-- end content wrapper div -->
+    
+          <div id="footer"> <span style="float:left;">&copy;<a href="/portal/page/portal/efetnew/contact" style="text-decoration:none;">EFET (Hellenic Food Authority)</a></span> <span style="float:right">design & development: <a href="http://www.iknowhow.gr" target="_blank"><img src="/images/efet_res/img/Iknowhow_logo.jpg" align="absmiddle"></a></span> <span style="clear:both"></span> </div>          </div>          <!-- end container div -->          <link href="/images/efet_res/js/jquery-ui-1.7.3.blitzer/css/blitzer/jquery-ui-1.7.3.custom.css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="/images/efet_res/js/jquery-ui-1.7.3.blitzer/js/jquery-ui-1.7.3.custom.min.js"></script>
+<script type="text/javascript" src="/images/efet_res/js/jquery.form.js"></script>
+<script type="text/javascript">
+function clearForm() {
+    $('#newsName').val('');
+    $('#newsMail').val('');
+    $('#c_press').removeAttr('checked');
+    $('#c_events').removeAttr('checked');
+    $('#c_food').removeAttr('checked');
+    $('#c_other').removeAttr('checked');
+}
+
+function RespData(data) {
+
+	var msg = data.message;
+    if(data.status == 'SUCCESS') {
+    	alert(msg);
+    }
+    else {
+        alert(msg);
+        return; 
+    }
+}
+
+
+
+ $(document).ready(function () {
+    $("#newsletterDiv").hide();
+    //--------------------------------------------------
+     
+    $("#newsletterDiv").dialog({
+        title: 'Newsletter',
+        bgiframe: true,
+        autoOpen: false,
+        resizable: false,
+        position: 'center',
+        width: 528,
+        modal: true,
+        zIndex: 3999,
+        closeOnEscape: false,
+        buttons: {Close: function () {
+                clearForm(); $(this).dialog('close'); 
+            }, Register: function () { sbmNewsletter(); }
+        }
+    });
+
+$('#fNewsletter').ajaxForm({ 
+dataType:  'json', 
+success:   RespData 
+}); 
+
+
+}); 
+
+function openNewsletterForm(){
+$('#newsletterDiv').dialog('open');
+}
+
+function sbmNewsletter() {
+
+    if (!validateForm('fNewsletter')) {
+        return;
+    }
+
+    if(!($('#c_press').attr("checked")) && !($('#c_food').attr("checked")) && !($('#c_events').attr("checked")) && !($('#c_other').attr("checked"))
+    ){
+    alert('Please, choose AT LEAST one category');
+    return;
+    }
+    $('#fNewsletter').submit();
+}
+
+ 
+
+</script>
+<div id="newsletterDiv" style="z-index:1000">
+  <p id="summary">Fill in <b>"Fullname"</b> και <b>"Email"</b>, choose one or more categories for which you would like to get informed by Newsletter and press the button <b>"Register"</b>.</p>
+  <p align="center">
+  <form method="post" name="fNewsletter" id="fNewsletter" action="/portal/pls/portal/efet_schema.pck_newsletters.submit_newsletters">
+    <table style="border:1px solid #CD0707">
+      <tbody>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>FullName:</b></td>
+          <td style="border:1px solid #CD0707"><input type="text" size="50" id="newsName" name="newsName" caption="FullName" isRequired="1"/></td>
+        </tr>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>Email:</b></td>
+          <td style="border:1px solid #CD0707"><input size="50" id="newsMail" name="newsMail" format="email" caption="Email" isRequired="1"/></td>
+        </tr>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>Press Releases</b></td>
+          <td align="left" style="border:1px solid #CD0707"><input type="checkbox" id="c_press" name="c_press" /></td>
+        </tr>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>Seminars - conferences - workshops - events</b></td>
+          <td align="left" style="border:1px solid #CD0707"><input type="checkbox" id="c_events" name="c_events" /></td>
+        </tr>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>Information about food</b></td>
+          <td align="left" style="border:1px solid #CD0707"><input type="checkbox" id="c_food" name="c_food" /></td>
+        </tr>
+        <tr>
+          <td style="width:200px; text-align:justify; border:1px solid #CD0707"><b>Other News(EFSA, RASFF, CODEX etc)</b></td>
+          <td align="left" style="border:1px solid #CD0707"><input type="checkbox" id="c_other" name="c_other" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  </p>
+</div>
+
+<link href="/images/efet_res/js/jquery-ui-1.7.3.blitzer/css/blitzer/jquery-ui-1.7.3.custom.css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="/images/efet_res/js/jquery-ui-1.7.3.blitzer/js/jquery-ui-1.7.3.custom.min.js"></script>
+<script language="javascript">
+ $(document).ready(function () {
+    $("#polres").hide();
+
+    //--------------------------------------------------
+     
+    $("#polres").dialog({
+        title: 'Poll Results',
+        bgiframe: true,
+        autoOpen: false,
+        resizable: false,
+        position: 'center',
+        width: 528,
+        modal: true,
+        zIndex: 3999,
+        closeOnEscape: false,
+        buttons: {Close: function () {
+                $(this).dialog('close');
+            }
+        }
+    });
+
+});
+
+function openPollsForm(var1){
+if(var1==1){
+//alert("please Vote");
+$('#polls').dialog('open');//
+}
+else{
+//alert("polres");
+$('#polres').dialog('open');
+}
+}
+
+</script>
+
+<div id="polres">
+<p><b><u>Tell us your opinion about our new Portal</u></b></p>
+<p align="center"><table width="100%" style="padding-left:15px; text-align:left"><tr><td><u>Excellent: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="34" height="20"> 34% </td></tr><tr><td><u>Good: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="28" height="20"> 28% </td></tr><tr><td><u>Average: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="21" height="20"> 21% </td></tr><tr><td><u>Not so good: <u></td></tr><tr>
+      <td><img src="/images/efet_res/img/poll-gradient.png" width="18" height="20"> 18% </td></tr></table></p>
+<br>
+<p><u>Total votes:</u> <b>790</b></p>
+<br>
+<p><a href="/portal/page/portal/efetnew/news/polls_list"><b><u>See all polls</u></b></a></p>
+</div>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            var jqxhr = $.getJSON("http://jsonip.appspot.com?callback=?", function(data) {
+
+                var CL_IP = data.ip;
+
+                $("#p_IP").val(CL_IP);
+
+
+            });
+
+        });
+
+    </script>
+    //<div id="dialog">
+        <!--	<img src="/images/efet_res/images/card_Christmas_2012.jpg" border="0"  height="480", width="630"/></a>
+        </div>-->
+
+</body>
+</html>
+<!-- Page Metadata Generated On: 11-JUL-2014:00:16:14  Time Taken: 70 msecs -->
