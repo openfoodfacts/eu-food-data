@@ -1,0 +1,1 @@
+https://apps2.bvl.bund.de/bltu/app/process/bvl-btl_p_veroeffentlichung?execution=e1s5&osForm=osForm&javax.faces.ViewState=e1s5&osForm%3Abvl_002dbtl_002ep__veroeffentlichung_002egeneralliste__part_002edGrid%3A50%3Abvl_002dbtl_002ep__veroeffentlichung_002egeneralliste__part_002edGrid_002eexport1=clicked
