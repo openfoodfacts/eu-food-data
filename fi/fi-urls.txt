@@ -1,0 +1,5 @@
+http://www.evira.fi/files/attachments/fi/elintarvikkeet/valmistus_ja_myynti/elintarvikehuoneistot/liha-alan_laitokset.xls
+http://www.evira.fi/files/attachments/fi/elintarvikkeet/valmistus_ja_myynti/elintarvikehuoneistot/kala-alan_laitokset.xls
+http://www.evira.fi/files/attachments/fi/elintarvikkeet/valmistus_ja_myynti/elintarvikehuoneistot/maitoalanlaitokset.xls
+http://www.evira.fi/files/attachments/fi/elintarvikkeet/valmistus_ja_myynti/elintarvikehuoneistot/muna-alanlaitokset.xls
+http://www.evira.fi/files/attachments/fi/elintarvikkeet/valmistus_ja_myynti/elintarvikehuoneistot/varastolaitokset.xls
