@@ -1,0 +1,16 @@
+http://www.pvd.gov.lv/text_files/sect_0_general-act.xls
+http://www.pvd.gov.lv/text_files/sect_1_domestic_ungulates.xls
+http://www.pvd.gov.lv/text_files/sect_2_poultry_lagomorphs.xls
+http://www.pvd.gov.lv/text_files/sect_3_farmed_games.xls
+http://www.pvd.gov.lv/text_files/sect_4_wild_game.xls
+http://www.pvd.gov.lv/text_files/sect_5_mm_mp_msm.xls
+http://www.pvd.gov.lv/text_files/sect_6_meat_products.xls
+http://www.pvd.gov.lv/text_files/sect_7_live_molusces.xls
+http://www.pvd.gov.lv/text_files/sect_8_fishery.xls
+http://www.pvd.gov.lv/text_files/sect_9_raw_milk_dairy.xls
+http://www.pvd.gov.lv/text_files/sect_10_eggs_egg_prod.xls
+http://www.pvd.gov.lv/text_files/2_sect_11_frogs_legs_snail.xls
+http://www.pvd.gov.lv/text_files/sect_12_fats_greaves.xls
+http://www.pvd.gov.lv/text_files/sect_13_stomachs_bladders_intestines.xls
+http://www.pvd.gov.lv/text_files/sect_14_gelatine.xls
+http://www.pvd.gov.lv/text_files/sect_15_collagen.xls
