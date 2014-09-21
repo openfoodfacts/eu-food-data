@@ -1,0 +1,12 @@
+Method;type;nbcols;start_row;colnames
+UK_Model_1;xls;7;4;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks,Comments
+UK_Model_2;xls;6;6;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks
+UK_Model_3;xls;7;4;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks,Comments
+UK_Model_4;xls;7;4;Approval Number,Name,Local Authority,Category,Associated Activities,Remarks,Species,Comments
+UK_Model_5;xls;8;4;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks,Comments
+UK_Model_6;xls;8;4;Approval Number,Name,Local Authority,Category,Associated Activities,Species,District,Region,Remarks
+UK_Model_7;xls;9;7;Approval Number,Name,Local Authority,Category,Associated Activities,Species,District,Region,Remarks
+UK_Model_8;xls;7;6;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks
+UK_Model_9;xls;6;4;Approval Number,Name,Local Authority,Category,Associated Activities,Remarks
+UK_Model_10;xls;7;2;Approval Number,Name,Local Authority,Category,Associated Activities,Species,Remarks
+UK_Model_11;xls;6;2;Approval Number,Name,Local Authority,Category,Associated Activities,Remarks
