@@ -1,5 +1,5 @@
 #Version du 12 Octobre 2015
-#@pmainguet mainguetpierre@gmail.com
+Auteur: @pmainguet for @openfoodfacts
 
 Liste complète des sociétés ayant des autorisations sanitaires en France (liées à des produits d'origine animale)
 
